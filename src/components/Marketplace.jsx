@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, SlidersHorizontal, MapPin, Star, Fingerprint } from 'lucide-react';
-import { PRODUCTS, CRAFTS } from '../../../demoData.js';
+import { PRODUCTS, CRAFTS } from '../../demoData.js';
 
 export default function Marketplace({ go, openPassport }) {
   const [query, setQuery] = useState('');
