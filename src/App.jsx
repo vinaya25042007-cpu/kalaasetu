@@ -10,7 +10,7 @@ import BuyerMatching from './components/BuyerMatching.jsx';
 import DemandMap from './components/DemandMap.jsx';
 import GovDashboard from './components/GovDashboard.jsx';
 import CraftPassport from './components/CraftPassport.jsx';
-import { ARTISANS, PRODUCTS } from '../../demoData.js';
+import { ARTISANS, PRODUCTS } from '../demoData.js';
 
 const SCREENS = [
   { id: 'landing', label: 'Home', icon: Home },
