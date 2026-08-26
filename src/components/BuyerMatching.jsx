@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Target, Search, Award, MapPin, ArrowRight } from 'lucide-react';
-import { PRODUCTS } from '../../../demoData.js';
+import { PRODUCTS } from '../../demoData.js';
 
 export default function BuyerMatching({ go }) {
   const [query, setQuery] = useState('500 handmade gifts under ₹1,000');

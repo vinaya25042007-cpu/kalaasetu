@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Map, TrendingUp, ArrowRight } from 'lucide-react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
-import { STATE_DEMAND } from '../../../demoData.js';
+import { STATE_DEMAND } from '../../demoData.js';
 
 export default function DemandMap({ go }) {
   const [selected, setSelected] = useState(STATE_DEMAND[0]);

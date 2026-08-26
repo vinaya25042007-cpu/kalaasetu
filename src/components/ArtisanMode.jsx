@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mic, Package, ShoppingBag, Wallet, Globe, ChevronRight, Star, Plus } from 'lucide-react';
-import { ARTISANS, PRODUCTS, ORDERS } from '../../../demoData.js';
+import { ARTISANS, PRODUCTS, ORDERS } from '../../demoData.js';
 
 const LANGS = { en: 'English', ta: 'தமிழ்', hi: 'हिंदी' };
 const T = {

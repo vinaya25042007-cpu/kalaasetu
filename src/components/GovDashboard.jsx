@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Package, ShoppingBag, TrendingUp, Landmark, ArrowRight } from 'lucide-react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, PieChart, Pie, Cell } from 'recharts';
-import { ARTISANS, PRODUCTS, ORDERS, MONTHLY_TREND, STATE_DEMAND } from '../../../demoData.js';
+import { ARTISANS, PRODUCTS, ORDERS, MONTHLY_TREND, STATE_DEMAND } from '../../demoData.js';
 
 const COLORS = ['#BF5B3D','#E8A93C','#7A1F3D','#232C4D','#8C6A3F'];
 
