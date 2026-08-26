@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Home, User, Sparkles, Mic, Store, Target, Map, Landmark, Fingerprint, Menu, X } from 'lucide-react';
-import Landing from './components/Landing.jsx';
+import Landing from './components/landing.jsx';
 import ArtisanMode from './components/ArtisanMode.jsx';
 import AICatalog from './components/AICatalog.jsx';
 import VoiceAssistant from './components/VoiceAssistant.jsx';
