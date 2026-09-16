@@ -13,6 +13,7 @@ import CraftPassport from './components/CraftPassport.jsx';
 import ArtisanStoryModal from './components/ArtisanStoryModal.jsx';
 import LanguageSelector from './components/LanguageSelector.jsx';
 import { LanguageProvider, useLanguage } from './i18n/LanguageContext.jsx';
+import logoImg from './assets/logo.png';
 import { ARTISANS, PRODUCTS } from '../demoData.js';
 
 function MainApp() {
@@ -60,12 +61,14 @@ function MainApp() {
         <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between gap-2">
           {/* Logo & Brand */}
           <div
-            className="flex items-center gap-2 cursor-pointer flex-shrink-0"
+            className="flex items-center gap-2.5 cursor-pointer flex-shrink-0 group"
             onClick={() => go('landing')}
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-terracotta to-turmeric flex items-center justify-center text-white font-display font-bold shadow-sm">
-              क
-            </div>
+            <img
+              src={logoImg}
+              alt="KalaaSetu Logo"
+              className="w-9 h-9 rounded-xl object-cover shadow-sm border border-terracotta/40 group-hover:border-terracotta transition-all transform group-hover:scale-105"
+            />
             <span className="font-display font-bold text-lg tracking-tight text-ivory">
               Kalaa<span className="text-terracotta">Setu</span>
             </span>
