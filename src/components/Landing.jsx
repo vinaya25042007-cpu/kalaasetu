@@ -155,19 +155,19 @@ export default function Landing({ go, onOpenStory, onSearch }) {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="mt-5 flex flex-wrap gap-2.5 items-center justify-center"
+              className="mt-5 flex flex-wrap gap-3 items-center justify-center"
             >
               <button
-                onClick={() => go('marketplace')}
+                onClick={() => go('artisan')}
                 className="px-6 py-3 rounded-full bg-terracotta text-white font-bold shadow-glow hover:bg-terracotta-dark transition flex items-center gap-2 text-xs sm:text-sm cursor-pointer"
               >
-                {t('landing.exploreArtisans')} <ArrowRight size={16} />
+                <Users size={16} /> Artisan Mode
               </button>
               <button
-                onClick={() => go('artisan')}
-                className="px-5 py-3 rounded-full bg-white border border-terracotta/30 text-terracotta font-bold hover:bg-terracotta/5 transition text-xs sm:text-sm flex items-center gap-2 shadow-2xs cursor-pointer"
+                onClick={() => go('marketplace')}
+                className="px-6 py-3 rounded-full bg-white border border-terracotta/30 text-terracotta font-bold hover:bg-terracotta/5 transition text-xs sm:text-sm flex items-center gap-2 shadow-2xs cursor-pointer"
               >
-                <Users size={15} /> Open Artisan Mode
+                <ShoppingBag size={16} /> Marketplace <ArrowRight size={15} />
               </button>
             </motion.div>
           </div>
