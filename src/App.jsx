@@ -54,9 +54,9 @@ function MainApp() {
   ];
 
   return (
-    <div className="min-h-screen bg-ivory text-indigonight font-body khadi-texture flex flex-col justify-between">
+    <div className="min-h-screen bg-[#120C08] text-ivory font-body khadi-texture flex flex-col justify-between">
       {/* Top Navigation Bar */}
-      <div className="sticky top-0 z-50 glass border-b border-terracotta/20 shadow-sm">
+      <div className="sticky top-0 z-50 glass border-b border-terracotta/25 shadow-md bg-[#160E09]/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between gap-2">
           {/* Logo & Brand */}
           <div
@@ -66,7 +66,7 @@ function MainApp() {
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-terracotta to-turmeric flex items-center justify-center text-white font-display font-bold shadow-sm">
               क
             </div>
-            <span className="font-display font-bold text-lg tracking-tight">
+            <span className="font-display font-bold text-lg tracking-tight text-ivory">
               Kalaa<span className="text-terracotta">Setu</span>
             </span>
           </div>
@@ -80,7 +80,7 @@ function MainApp() {
                 className={`px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all whitespace-nowrap ${
                   screen === s.id
                     ? 'bg-terracotta text-white shadow-glow'
-                    : 'text-indigonight/75 hover:bg-terracotta/10'
+                    : 'text-ivory/80 hover:bg-terracotta/20 hover:text-white'
                 }`}
               >
                 <s.icon size={14} /> {s.label}
@@ -94,7 +94,7 @@ function MainApp() {
             <LanguageSelector />
 
             <button
-              className="lg:hidden p-1.5 rounded-xl hover:bg-terracotta/10 text-indigonight transition"
+              className="lg:hidden p-1.5 rounded-xl hover:bg-terracotta/20 text-ivory transition"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
@@ -110,7 +110,7 @@ function MainApp() {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden overflow-hidden border-t border-terracotta/20 bg-ivory/95 backdrop-blur-md"
+              className="lg:hidden overflow-hidden border-t border-terracotta/20 bg-[#160E09]/95 backdrop-blur-md"
             >
               <div className="p-3 grid grid-cols-2 gap-2">
                 {screens.map((s) => (
@@ -120,7 +120,7 @@ function MainApp() {
                     className={`px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition ${
                       screen === s.id
                         ? 'bg-terracotta text-white shadow-sm'
-                        : 'bg-white/80 text-indigonight/75 hover:bg-white'
+                        : 'bg-[#241710] text-ivory/80 hover:bg-[#2c1d14] hover:text-white'
                     }`}
                   >
                     <s.icon size={15} /> {s.label}
@@ -184,10 +184,10 @@ function MainApp() {
       </AnimatePresence>
 
       {/* Footer */}
-      <footer className="text-center py-8 px-4 text-xs sm:text-sm text-indigonight/60 border-t border-terracotta/15 mt-12 bg-white/40">
+      <footer className="text-center py-8 px-4 text-xs sm:text-sm text-ivory/60 border-t border-terracotta/20 mt-12 bg-[#160E09]/60">
         <p className="max-w-md mx-auto">
           {t('footer.slogan')} —{' '}
-          <span className="font-bold text-terracotta font-display">
+          <span className="font-bold text-terracotta-light font-display">
             {t('footer.brand')}
           </span>
         </p>

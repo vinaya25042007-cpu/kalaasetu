@@ -60,31 +60,31 @@ export default function Landing({ go, onOpenStory, onSearch }) {
         <section className="pt-4 sm:pt-8 pb-8 relative">
           {/* Heritage Shloka / Motto Ribbon */}
           <div className="text-center mb-4">
-            <span className="text-[11px] font-bold text-terracotta tracking-widest uppercase bg-terracotta/10 px-4 py-1.5 rounded-full border border-terracotta/20 shadow-xs inline-flex items-center gap-2">
+            <span className="text-[11px] font-bold text-turmeric-light tracking-widest uppercase bg-terracotta/20 px-4 py-1.5 rounded-full border border-terracotta/35 shadow-sm inline-flex items-center gap-2">
               <span>॥ हस्तकला परमो धर्मः</span>
               <span className="text-turmeric">•</span>
               <span>सर्वं स्वदेशजं सुन्दरम् ॥</span>
             </span>
           </div>
 
-          {/* MAIN HERO SHOWCASE CARD (Centered & Clean) */}
-          <div className="max-w-4xl mx-auto flex flex-col justify-center text-center glass rounded-3xl p-6 sm:p-10 border-2 border-terracotta/30 shadow-xl overflow-hidden bg-gradient-to-b from-white/95 via-ivory/90 to-white/95 relative">
+          {/* MAIN HERO SHOWCASE CARD (Dark Earthy Theme across all screen sizes) */}
+          <div className="max-w-4xl mx-auto flex flex-col justify-center text-center glass rounded-3xl p-6 sm:p-10 border-2 border-terracotta/35 shadow-2xl overflow-hidden bg-gradient-to-b from-[#22160F]/95 via-[#1A100B]/90 to-[#22160F]/95 relative">
             {/* Traditional Rangoli Corner Accents */}
-            <div className="absolute top-2 left-2 pointer-events-none">
+            <div className="absolute top-2 left-2 pointer-events-none text-turmeric/40">
               <RangoliCorner size={36} />
             </div>
-            <div className="absolute top-2 right-2 pointer-events-none rotate-90">
+            <div className="absolute top-2 right-2 pointer-events-none rotate-90 text-turmeric/40">
               <RangoliCorner size={36} />
             </div>
-            <div className="absolute bottom-2 left-2 pointer-events-none -rotate-90">
+            <div className="absolute bottom-2 left-2 pointer-events-none -rotate-90 text-turmeric/40">
               <RangoliCorner size={36} />
             </div>
-            <div className="absolute bottom-2 right-2 pointer-events-none rotate-180">
+            <div className="absolute bottom-2 right-2 pointer-events-none rotate-180 text-turmeric/40">
               <RangoliCorner size={36} />
             </div>
 
             {/* Ornate Indian Heritage Badge */}
-            <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-terracotta/15 via-turmeric/25 to-terracotta/15 text-indigonight text-xs font-bold mb-4 tracking-wide border border-terracotta/25 shadow-2xs mx-auto">
+            <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-terracotta/25 via-turmeric/25 to-terracotta/25 text-ivory text-xs font-bold mb-4 tracking-wide border border-terracotta/35 shadow-xs mx-auto">
               <DiyaLamp size={18} />
               <span>🪷 Indian Craftsmanship meets Modern AI</span>
               <DiyaLamp size={18} />
@@ -94,7 +94,7 @@ export default function Landing({ go, onOpenStory, onSearch }) {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold leading-[1.18] tracking-tight text-indigonight"
+              className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold leading-[1.18] tracking-tight text-ivory"
             >
               {t('landing.heroHeadline1')}
               <br />
@@ -107,7 +107,7 @@ export default function Landing({ go, onOpenStory, onSearch }) {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mt-3.5 text-sm sm:text-base text-indigonight/80 max-w-xl mx-auto leading-relaxed font-normal"
+              className="mt-3.5 text-sm sm:text-base text-ivory/80 max-w-xl mx-auto leading-relaxed font-normal"
             >
               Empowering <b>15,000+ Indian Master Artisans</b> across 28 states. Zero typing. Zero English barriers. An artisan speaks in their native mother tongue — AI values the craft, certifies GI origin, and connects to global buyers.
             </motion.p>
@@ -116,9 +116,9 @@ export default function Landing({ go, onOpenStory, onSearch }) {
             <div className="mt-3.5 flex items-center justify-center">
               <button
                 onClick={() => go('voice')}
-                className="px-4 py-1.5 rounded-full bg-madder/10 hover:bg-madder/15 text-madder border border-madder/25 text-xs font-bold transition flex items-center gap-2 shadow-2xs cursor-pointer"
+                className="px-4 py-1.5 rounded-full bg-madder/25 hover:bg-madder/40 text-pink-200 border border-madder/45 text-xs font-bold transition flex items-center gap-2 shadow-2xs cursor-pointer"
               >
-                <Mic size={14} className="text-madder animate-pulse" />
+                <Mic size={14} className="text-pink-300 animate-pulse" />
                 <span>🎙️ Live Regional Voice Studio: Speak in Tamil, Hindi, Bengali, Telugu...</span>
               </button>
             </div>
@@ -128,18 +128,18 @@ export default function Landing({ go, onOpenStory, onSearch }) {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 }}
-              className="mt-5 flex items-center gap-2 bg-white border border-terracotta/30 rounded-full px-4 py-2 shadow-sm max-w-lg mx-auto w-full"
+              className="mt-5 flex items-center gap-2 bg-[#281B13]/90 border border-terracotta/35 rounded-full px-4 py-2 shadow-inner max-w-lg mx-auto w-full"
               onSubmit={(e) => {
                 e.preventDefault();
                 submitSearch();
               }}
             >
-              <Search size={18} className="text-terracotta flex-shrink-0" />
+              <Search size={18} className="text-turmeric-light flex-shrink-0" />
               <input
                 value={heroQuery}
                 onChange={(e) => setHeroQuery(e.target.value)}
                 placeholder={t('landing.heroSearchPlaceholder')}
-                className="bg-transparent outline-none text-xs sm:text-sm flex-1 text-indigonight placeholder:text-indigonight/45 text-left"
+                className="bg-transparent outline-none text-xs sm:text-sm flex-1 text-ivory placeholder:text-ivory/45 text-left"
                 aria-label={t('common.search')}
               />
               <button
@@ -165,7 +165,7 @@ export default function Landing({ go, onOpenStory, onSearch }) {
               </button>
               <button
                 onClick={() => go('marketplace')}
-                className="px-6 py-3 rounded-full bg-white border border-terracotta/30 text-terracotta font-bold hover:bg-terracotta/5 transition text-xs sm:text-sm flex items-center gap-2 shadow-2xs cursor-pointer"
+                className="px-6 py-3 rounded-full bg-[#241710]/90 border border-terracotta/40 text-ivory font-bold hover:bg-terracotta/20 transition text-xs sm:text-sm flex items-center gap-2 shadow-2xs cursor-pointer"
               >
                 <ShoppingBag size={16} /> Marketplace <ArrowRight size={15} />
               </button>
@@ -178,27 +178,27 @@ export default function Landing({ go, onOpenStory, onSearch }) {
 
         {/* NATIONAL ARTISAN IMPACT TICKER WITH TRADITIONAL BRASS ACCENTS */}
         <section className="py-4">
-          <div className="glass rounded-3xl p-5 sm:p-6 border border-terracotta/20 shadow-xs bg-gradient-to-r from-white/95 via-sand/40 to-white/95 relative overflow-hidden">
+          <div className="glass rounded-3xl p-5 sm:p-6 border border-terracotta/30 shadow-md bg-gradient-to-r from-[#20150E]/95 via-[#281B13]/80 to-[#20150E]/95 relative overflow-hidden">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
               <div className="flex flex-col items-center">
                 <DiyaLamp size={18} className="mb-1 text-turmeric" />
-                <p className="font-display font-black text-2xl sm:text-3xl text-terracotta">15,200+</p>
-                <p className="text-[11px] sm:text-xs text-indigonight/60 font-semibold uppercase tracking-wider mt-0.5">Master Artisans</p>
+                <p className="font-display font-black text-2xl sm:text-3xl text-terracotta-light">15,200+</p>
+                <p className="text-[11px] sm:text-xs text-ivory/70 font-semibold uppercase tracking-wider mt-0.5">Master Artisans</p>
               </div>
               <div className="flex flex-col items-center">
                 <DiyaLamp size={18} className="mb-1 text-turmeric" />
-                <p className="font-display font-black text-2xl sm:text-3xl text-indigonight">28</p>
-                <p className="text-[11px] sm:text-xs text-indigonight/60 font-semibold uppercase tracking-wider mt-0.5">States & UTs Mapped</p>
+                <p className="font-display font-black text-2xl sm:text-3xl text-ivory">28</p>
+                <p className="text-[11px] sm:text-xs text-ivory/70 font-semibold uppercase tracking-wider mt-0.5">States & UTs Mapped</p>
               </div>
               <div className="flex flex-col items-center">
                 <DiyaLamp size={18} className="mb-1 text-turmeric" />
-                <p className="font-display font-black text-2xl sm:text-3xl text-green-700">₹4.8+ Cr</p>
-                <p className="text-[11px] sm:text-xs text-indigonight/60 font-semibold uppercase tracking-wider mt-0.5">Direct Bank Payouts</p>
+                <p className="font-display font-black text-2xl sm:text-3xl text-emerald-400">₹4.8+ Cr</p>
+                <p className="text-[11px] sm:text-xs text-ivory/70 font-semibold uppercase tracking-wider mt-0.5">Direct Bank Payouts</p>
               </div>
               <div className="flex flex-col items-center">
                 <DiyaLamp size={18} className="mb-1 text-turmeric" />
-                <p className="font-display font-black text-2xl sm:text-3xl text-bronze">0%</p>
-                <p className="text-[11px] sm:text-xs text-indigonight/60 font-semibold uppercase tracking-wider mt-0.5">Middlemen Commission</p>
+                <p className="font-display font-black text-2xl sm:text-3xl text-turmeric-light">0%</p>
+                <p className="text-[11px] sm:text-xs text-ivory/70 font-semibold uppercase tracking-wider mt-0.5">Middlemen Commission</p>
               </div>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function Landing({ go, onOpenStory, onSearch }) {
 
         {/* CRAFT CATEGORIES FILTER PILLS */}
         <section className="py-4">
-          <p className="text-xs font-bold uppercase tracking-wider text-bronze mb-3 text-center">
+          <p className="text-xs font-bold uppercase tracking-wider text-turmeric-light mb-3 text-center">
             {t('landing.categoriesTitle')}
           </p>
           <div className="flex flex-wrap justify-center gap-2">
@@ -214,7 +214,7 @@ export default function Landing({ go, onOpenStory, onSearch }) {
               <button
                 key={c.id}
                 onClick={() => submitSearch(c.query)}
-                className="px-3.5 py-1.5 rounded-full bg-white/90 border border-terracotta/20 text-xs font-semibold text-indigonight/80 hover:bg-terracotta/10 hover:text-terracotta hover:border-terracotta/40 transition cursor-pointer shadow-2xs"
+                className="px-3.5 py-1.5 rounded-full bg-[#241710]/90 border border-terracotta/30 text-xs font-semibold text-ivory/85 hover:bg-terracotta/20 hover:text-white hover:border-terracotta/60 transition cursor-pointer shadow-2xs"
               >
                 {t(c.labelKey)}
               </button>
@@ -231,21 +231,21 @@ export default function Landing({ go, onOpenStory, onSearch }) {
             initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass rounded-3xl p-6 sm:p-8 border-2 border-madder/30 shadow-sm relative overflow-hidden bg-white/90"
+            className="glass rounded-3xl p-6 sm:p-8 border-2 border-madder/40 shadow-md relative overflow-hidden bg-[#221216]/90"
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-madder" />
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-2xl bg-madder/15 text-madder flex items-center justify-center">
+              <div className="w-10 h-10 rounded-2xl bg-madder/25 text-rose-300 flex items-center justify-center">
                 <AlertTriangle size={20} />
               </div>
-              <h3 className="font-display font-bold text-xl sm:text-2xl text-madder">
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-rose-300">
                 {t('landing.problemTitle')}
               </h3>
             </div>
-            <p className="text-indigonight/80 leading-relaxed text-sm sm:text-base">
+            <p className="text-ivory/85 leading-relaxed text-sm sm:text-base">
               {t('landing.problemDesc')}
             </p>
-            <div className="mt-4 pt-4 border-t border-madder/15 text-xs text-madder font-semibold flex items-center gap-2 flex-wrap">
+            <div className="mt-4 pt-4 border-t border-madder/30 text-xs text-rose-300 font-semibold flex items-center gap-2 flex-wrap">
               <span>✕ No smartphone typing</span>
               <span>•</span>
               <span>✕ No English barrier</span>
@@ -258,21 +258,21 @@ export default function Landing({ go, onOpenStory, onSearch }) {
             initial={{ opacity: 0, x: 16 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass rounded-3xl p-6 sm:p-8 border-2 border-terracotta/30 shadow-sm relative overflow-hidden bg-white/90"
+            className="glass rounded-3xl p-6 sm:p-8 border-2 border-terracotta/40 shadow-md relative overflow-hidden bg-[#24170E]/90"
           >
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-terracotta" />
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-2xl bg-terracotta/15 text-terracotta flex items-center justify-center">
+              <div className="w-10 h-10 rounded-2xl bg-terracotta/25 text-terracotta-light flex items-center justify-center">
                 <Lightbulb size={20} />
               </div>
-              <h3 className="font-display font-bold text-xl sm:text-2xl text-terracotta">
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-terracotta-light">
                 {t('landing.solutionTitle')}
               </h3>
             </div>
-            <p className="text-indigonight/80 leading-relaxed text-sm sm:text-base">
+            <p className="text-ivory/85 leading-relaxed text-sm sm:text-base">
               {t('landing.solutionDesc')}
             </p>
-            <div className="mt-4 pt-4 border-t border-terracotta/15 text-xs text-terracotta font-semibold flex items-center gap-2 flex-wrap">
+            <div className="mt-4 pt-4 border-t border-terracotta/30 text-xs text-terracotta-light font-semibold flex items-center gap-2 flex-wrap">
               <span>✓ Show & Speak in 12 languages</span>
               <span>•</span>
               <span>✓ AI Instant GI Catalog</span>
@@ -284,10 +284,10 @@ export default function Landing({ go, onOpenStory, onSearch }) {
 
         {/* SEAMLESS 5-STEP JOURNEY WITH AUTHENTIC DEVANAGARI NUMERALS */}
         <section className="py-10">
-          <h2 className="text-center font-display text-2xl sm:text-3xl font-bold mb-2 text-indigonight">
+          <h2 className="text-center font-display text-2xl sm:text-3xl font-bold mb-2 text-ivory">
             {t('landing.journeyTitle')}
           </h2>
-          <p className="text-center text-indigonight/60 mb-10 text-xs sm:text-sm">
+          <p className="text-center text-ivory/70 mb-10 text-xs sm:text-sm">
             {t('landing.journeySub')}
           </p>
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 md:gap-2">
@@ -303,15 +303,15 @@ export default function Landing({ go, onOpenStory, onSearch }) {
               >
                 <motion.div
                   whileHover={{ scale: 1.06 }}
-                  className="w-15 h-15 rounded-2xl bg-white shadow-md border-2 border-terracotta/25 flex items-center justify-center mb-2.5 relative"
+                  className="w-15 h-15 rounded-2xl bg-[#241710] shadow-md border-2 border-terracotta/35 flex items-center justify-center mb-2.5 relative"
                 >
                   <span className="absolute -top-2 -right-2 w-5.5 h-5.5 rounded-full bg-terracotta text-white text-[10px] font-bold flex items-center justify-center shadow-2xs">
                     {step.num}
                   </span>
-                  <step.icon className="text-terracotta" size={24} />
+                  <step.icon className="text-turmeric-light" size={24} />
                 </motion.div>
-                <h3 className="font-display font-bold text-xs sm:text-sm text-indigonight">{step.label}</h3>
-                <p className="text-[11px] text-indigonight/60 mt-1 max-w-[140px] leading-tight">{step.desc}</p>
+                <h3 className="font-display font-bold text-xs sm:text-sm text-ivory">{step.label}</h3>
+                <p className="text-[11px] text-ivory/70 mt-1 max-w-[140px] leading-tight">{step.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -320,10 +320,10 @@ export default function Landing({ go, onOpenStory, onSearch }) {
         {/* STORIES BEHIND THE CRAFT SECTION */}
         <section className="py-6">
           <div className="text-center mb-6">
-            <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-indigonight">
+            <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-ivory">
               {t('landing.storiesTitle')}
             </h2>
-            <p className="text-xs sm:text-sm text-indigonight/65 mt-1 max-w-xl mx-auto">
+            <p className="text-xs sm:text-sm text-ivory/70 mt-1 max-w-xl mx-auto">
               {t('landing.storiesSub')}
             </p>
           </div>
@@ -336,23 +336,23 @@ export default function Landing({ go, onOpenStory, onSearch }) {
                   type="button"
                   whileHover={{ y: -3 }}
                   onClick={() => onOpenStory?.(product)}
-                  className="text-left glass rounded-3xl p-5 sm:p-6 border border-terracotta/20 hover:shadow-glow transition relative overflow-hidden cursor-pointer bg-white/85"
+                  className="text-left glass rounded-3xl p-5 sm:p-6 border border-terracotta/30 hover:border-terracotta/60 hover:shadow-glow transition relative overflow-hidden cursor-pointer bg-[#22160F]/90"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-terracotta">
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-terracotta-light">
                       {story.narrator.region}
                     </p>
-                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-turmeric/20 text-bronze font-bold">
+                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-turmeric/20 text-turmeric-light font-bold">
                       Artisan Video
                     </span>
                   </div>
-                  <h3 className="font-display text-lg sm:text-xl font-extrabold mb-1.5 text-indigonight">{story.title}</h3>
-                  <p className="text-xs sm:text-sm text-indigonight/70 leading-relaxed mb-3.5">{story.subtitle}</p>
+                  <h3 className="font-display text-lg sm:text-xl font-extrabold mb-1.5 text-ivory">{story.title}</h3>
+                  <p className="text-xs sm:text-sm text-ivory/75 leading-relaxed mb-3.5">{story.subtitle}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-semibold text-indigonight/60">
+                    <span className="text-xs font-semibold text-ivory/60">
                       {story.narrator.name} · {story.narrator.role}
                     </span>
-                    <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-madder">
+                    <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-rose-400">
                       <Play size={13} className="fill-current" /> {t('landing.watchStories')}
                     </span>
                   </div>
@@ -364,7 +364,7 @@ export default function Landing({ go, onOpenStory, onSearch }) {
 
         {/* EXPLORE THE PLATFORM PILLARS */}
         <section className="py-10">
-          <h2 className="text-center font-display text-2xl sm:text-3xl font-bold mb-7 text-indigonight">
+          <h2 className="text-center font-display text-2xl sm:text-3xl font-bold mb-7 text-ivory">
             {t('landing.exploreTitle')}
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -378,13 +378,13 @@ export default function Landing({ go, onOpenStory, onSearch }) {
                 key={i}
                 whileHover={{ y: -4 }}
                 onClick={() => go(f.id)}
-                className="glass rounded-2xl p-5 border border-terracotta/15 cursor-pointer hover:shadow-glow transition craft-card bg-white/85"
+                className="glass rounded-2xl p-5 border border-terracotta/25 cursor-pointer hover:shadow-glow hover:border-terracotta/50 transition craft-card bg-[#22160F]/90"
               >
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-terracotta to-turmeric flex items-center justify-center mb-3 shadow-xs">
                   <f.icon size={18} className="text-white" />
                 </div>
-                <h4 className="font-display font-bold mb-1 text-sm sm:text-base text-indigonight">{f.title}</h4>
-                <p className="text-xs text-indigonight/60">{f.desc}</p>
+                <h4 className="font-display font-bold mb-1 text-sm sm:text-base text-ivory">{f.title}</h4>
+                <p className="text-xs text-ivory/70">{f.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -392,15 +392,15 @@ export default function Landing({ go, onOpenStory, onSearch }) {
 
         {/* WARLI HARVEST DANCE & HERITAGE QUOTE BANNER */}
         <section className="text-center py-10 flex flex-col items-center relative">
-          <div className="flex items-center gap-3 mb-3">
+          <div className="flex items-center gap-3 mb-3 text-turmeric">
             <DiyaLamp size={26} />
-            <WarliChain count={9} className="hidden sm:flex" />
+            <WarliChain count={9} className="hidden sm:flex text-terracotta" />
             <DiyaLamp size={26} />
           </div>
           <p className="text-lg sm:text-2xl md:text-3xl font-display font-bold text-gradient max-w-3xl leading-snug">
             "{t('landing.quote')}"
           </p>
-          <p className="text-xs text-indigonight/55 mt-2 italic">
+          <p className="text-xs text-ivory/60 mt-2 italic">
             Every thread, pot, and stroke is an unbroken civilizational thread of Indian heritage.
           </p>
         </section>

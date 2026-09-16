@@ -2,23 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-* { scrollbar-width: thin; scrollbar-color: #BF5B3D #FBF6EE; }
+* { scrollbar-width: thin; scrollbar-color: #BF5B3D #160F0A; }
 ::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #120C08; }
 ::-webkit-scrollbar-thumb { background: #BF5B3D; border-radius: 8px; }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #FBF6EE;
-  background-image: radial-gradient(circle at 1px 1px, rgba(191,91,61,0.12) 1px, transparent 0);
+  background-color: #120C08;
+  color: #FBF6EE;
+  background-image: radial-gradient(circle at 1px 1px, rgba(232,169,60,0.09) 1px, transparent 0);
   background-size: 22px 22px;
+  min-height: 100vh;
 }
 
 h1,h2,h3,h4, .font-display { font-family: 'Poppins', sans-serif; }
 
 .glass {
-  background: rgba(255,255,255,0.65);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(30, 20, 14, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .mandala-border {
@@ -38,26 +41,26 @@ h1,h2,h3,h4, .font-display { font-family: 'Poppins', sans-serif; }
 .pulse-ring { animation: pulse-ring 1.6s cubic-bezier(0.2,0.6,0.4,1) infinite; }
 
 .text-gradient {
-  background: linear-gradient(90deg, #BF5B3D, #E8A93C, #7A1F3D);
+  background: linear-gradient(90deg, #E5876A, #F3C978, #D96B43);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Subtle handmade khadi / organic paper texture */
+/* Authentic handmade dark khadi / earthen paper texture across all screen sizes */
 .khadi-texture {
-  background-color: #FBF6EE;
+  background-color: #120C08;
   background-image: 
-    radial-gradient(circle at 1px 1px, rgba(191,91,61,0.08) 1px, transparent 0),
-    repeating-linear-gradient(45deg, rgba(191,91,61,0.018) 0, rgba(191,91,61,0.018) 1px, transparent 1px, transparent 10px);
+    radial-gradient(circle at 1px 1px, rgba(232,169,60,0.08) 1px, transparent 0),
+    repeating-linear-gradient(45deg, rgba(191,91,61,0.035) 0, rgba(191,91,61,0.035) 1px, transparent 1px, transparent 12px);
 }
 
 .craft-card {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .craft-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 32px -8px rgba(191, 91, 61, 0.15);
+  box-shadow: 0 16px 32px -8px rgba(232, 169, 60, 0.2);
 }
 
 @media (prefers-reduced-motion: reduce) {
