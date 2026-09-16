@@ -28,14 +28,52 @@ const gradients = [
   "from-turmeric to-terracotta-dark","from-bronze to-madder","from-terracotta-dark to-indigonight"
 ];
 
+const CRAFT_IMAGES = {
+  "Bridal Kanchipuram Silk Saree": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+  "Festive Kanchipuram Saree": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+  "Kanchipuram Silk Dupatta": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+  "Madhubani Ram-Sita Wall Art": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80",
+  "Madhubani Tree of Life Canvas": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=800&q=80",
+  "Sambalpuri Ikat Saree": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=800&q=80",
+  "Ikat Dress Material Set": "https://images.unsplash.com/photo-1528458876861-544fd1761a91?auto=format&fit=crop&w=800&q=80",
+  "Blue Pottery Dinner Set": "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80",
+  "Blue Pottery Flower Vase": "https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=800&q=80",
+  "Channapatna Stacking Toy Set": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80",
+  "Channapatna Wooden Chess Set": "https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=800&q=80",
+  "Dhokra Tribal Horse Figurine": "https://images.unsplash.com/photo-1567653418876-5bb0e566e1c2?auto=format&fit=crop&w=800&q=80",
+  "Dhokra Wall Hanging - Tree of Life": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
+  "Pattachitra Jagannath Scroll": "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=80",
+  "Pattachitra Palm Leaf Etching": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+  "Warli Painting Wedding Canvas": "https://images.unsplash.com/photo-1584727638096-042c45049ebe?auto=format&fit=crop&w=800&q=80",
+  "Warli Painted Terracotta Pot": "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80",
+  "Bidriware Hookah Base": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+  "Bidriware Decorative Box": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80",
+  "Phulkari Embroidered Dupatta": "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?auto=format&fit=crop&w=800&q=80",
+  "Phulkari Cushion Covers (Set of 2)": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80",
+  "Bandhani Silk Saree": "https://images.unsplash.com/photo-1610030469668-96541f5348d5?auto=format&fit=crop&w=800&q=80",
+  "Bandhani Dupatta": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80",
+  "Chikankari Kurta Set": "https://images.unsplash.com/photo-1583391733975-08149e6f9872?auto=format&fit=crop&w=800&q=80",
+  "Chikankari Saree": "https://images.unsplash.com/photo-1596783074418-472e39130095?auto=format&fit=crop&w=800&q=80",
+  "Bankura Terracotta Horse": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
+  "Terracotta Wall Plates (Set of 3)": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80",
+  "Kalamkari Hand-Painted Saree": "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=800&q=80",
+  "Kalamkari Wall Tapestry": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=800&q=80",
+  "Bamboo Handwoven Basket": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80",
+  "Bamboo Table Lamp": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+  "Bamboo Storage Organiser Set": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
+};
+
 let pid = 1;
-function p(artisanId, name, material, price, tags, desc) {
+function p(artisanId, name, material, price, tags, desc, customImage) {
   const a = ARTISANS.find(x => x.id === artisanId);
+  const image = customImage || CRAFT_IMAGES[name] || "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80";
   return {
     id: pid++, artisanId, artisan: a.name, craft: a.craft,
     district: a.district, state: a.state, name, material, price,
-    tags, desc, gradient: gradients[pid % gradients.length],
+    tags, desc, image, gradient: gradients[pid % gradients.length],
     matchScore: 70 + Math.floor(Math.random()*29),
+    stock: 2 + (pid % 8),
+    giCertified: true,
   };
 }
 

@@ -43,3 +43,28 @@ h1,h2,h3,h4, .font-display { font-family: 'Poppins', sans-serif; }
   background-clip: text;
   color: transparent;
 }
+
+/* Subtle handmade khadi / organic paper texture */
+.khadi-texture {
+  background-color: #FBF6EE;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(191,91,61,0.08) 1px, transparent 0),
+    repeating-linear-gradient(45deg, rgba(191,91,61,0.018) 0, rgba(191,91,61,0.018) 1px, transparent 1px, transparent 10px);
+}
+
+.craft-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.craft-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(191, 91, 61, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

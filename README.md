@@ -86,4 +86,4 @@ Currently developed as a hackathon prototype using demo data, with the architect
 
 ---
 
-Made with ❤️ for India's artisans 🇮🇳
+Made with ❤️ for India's artisans 
